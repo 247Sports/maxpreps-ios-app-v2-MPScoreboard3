@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-light.otf">
+            <string>Siro-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClaimAthleteSuccessViewController" customModule="MPScoreboard3" customModuleProvider="target">
+            <connections>
+                <outlet property="claimAnotherButton" destination="R6X-90-BgU" id="Wx8-r0-Lc2"/>
+                <outlet property="continueButton" destination="PRD-YS-3QM" id="rcN-PS-wrh"/>
+                <outlet property="fakeStatusBar" destination="ej6-50-3jf" id="ZZH-Cz-r7Q"/>
+                <outlet property="navView" destination="34b-Qr-71d" id="uaD-xe-HHm"/>
+                <outlet property="subtitleLabel" destination="IfT-ct-LKA" id="oVY-vg-RSA"/>
+                <outlet property="teamTableView" destination="z8K-Ve-dJ0" id="Dqs-3X-WOJ"/>
+                <outlet property="titleLabel" destination="TAF-3t-TUx" id="7Ig-NP-jaB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-50-3jf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="MPLightGrayColor"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34b-Qr-71d">
+                    <rect key="frame" x="0.0" y="44" width="375" height="256"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, Brian!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TAF-3t-TUx">
+                            <rect key="frame" x="20" y="44" width="335" height="29"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="20"/>
+                            <color key="textColor" name="MPWhiteColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your career profile has been claimed and your teams have been added to your favorites." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IfT-ct-LKA">
+                            <rect key="frame" x="20" y="81" width="335" height="108"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Light" family="Siro" pointSize="24"/>
+                            <color key="textColor" name="MPWhiteColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="MPLightGrayColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRD-YS-3QM">
+                    <rect key="frame" x="20" y="677" width="335" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="MPLightGrayColor"/>
+                    <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="CONTINUE">
+                        <color key="titleColor" name="MPWhiteColor"/>
+                    </state>
+                    <connections>
+                        <action selector="continueButtonTouched:" destination="-1" eventType="touchUpInside" id="VGu-c9-1bb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6X-90-BgU">
+                    <rect key="frame" x="20" y="730" width="335" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                    <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="CLAIM ANOTHER PROFILE">
+                        <color key="titleColor" name="MPLightGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="claimAnotherButtonTouched:" destination="-1" eventType="touchUpInside" id="v6w-pw-JLB"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Ve-dJ0">
+                    <rect key="frame" x="20" y="267" width="335" height="264"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="cUV-Ns-Mt7"/>
+                        <outlet property="delegate" destination="-1" id="M6v-A2-1x8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <point key="canvasLocation" x="132" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="MPLightGrayColor">
+            <color red="0.65098039215686276" green="0.66274509803921566" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

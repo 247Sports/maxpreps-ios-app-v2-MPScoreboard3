@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-regular.otf">
+            <string>Siro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalWebViewController" customModule="MPScoreboard3" customModuleProvider="target">
+            <connections>
+                <outlet property="fakeStatusBar" destination="D3Q-nT-VRU" id="z6v-Rc-NhX"/>
+                <outlet property="navView" destination="pDo-tN-SMg" id="Tbn-Mu-S05"/>
+                <outlet property="notificationButton" destination="4xx-S7-G5w" id="mRB-Ns-076"/>
+                <outlet property="shareButton" destination="Jly-xD-uU0" id="s9e-ra-KyW"/>
+                <outlet property="titleLabel" destination="ven-e1-W8o" id="r9V-gi-cx7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-nT-VRU">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.59795930370000006" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDo-tN-SMg">
+                    <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ven-e1-W8o" userLabel="Title">
+                            <rect key="frame" x="90" y="18" width="234" height="20"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="19"/>
+                            <color key="textColor" name="MPBlackColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRj-5M-SmG" userLabel="BackButton">
+                            <rect key="frame" x="9" y="13" width="40" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                            <state key="normal" image="CloseCircular">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonTouched:" destination="-1" eventType="touchUpInside" id="acY-vZ-hjE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jly-xD-uU0">
+                            <rect key="frame" x="371" y="7" width="30" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" name="MPDarkGrayColor"/>
+                            <state key="normal" image="square.and.arrow.up" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </state>
+                            <connections>
+                                <action selector="shareButtonTouched:" destination="-1" eventType="touchUpInside" id="L7c-mh-hTQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xx-S7-G5w">
+                            <rect key="frame" x="331" y="9" width="30" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="ContestNotificationOff"/>
+                            <connections>
+                                <action selector="notificationButtonTouched:" destination="-1" eventType="touchUpInside" id="3pe-FI-MsS"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" id="v0a-5e-ejQ">
+                            <rect key="frame" x="0.0" y="55" width="414" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="MPGrayButtonBorderColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPb-QI-dOx">
+                    <rect key="frame" x="0.0" y="823" width="414" height="74"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="-49.275362318840585" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CloseCircular" width="24" height="24"/>
+        <image name="ContestNotificationOff" width="24" height="24"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <namedColor name="MPBlackColor">
+            <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPDarkGrayColor">
+            <color red="0.396078431372549" green="0.40000000000000002" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPGrayButtonBorderColor">
+            <color red="0.85098039215686272" green="0.85882352941176465" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

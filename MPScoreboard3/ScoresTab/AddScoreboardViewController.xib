@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-regular.otf">
+            <string>Siro-Regular</string>
+        </array>
+        <array key="siro-semibold.otf">
+            <string>Siro-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddScoreboardViewController" customModule="MPScoreboard3" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomContainerTitleLabel" destination="eK3-44-Uo2" id="cLv-Td-tae"/>
+                <outlet property="bottomContainerView" destination="ixf-A7-2QQ" id="h0d-q2-o1A"/>
+                <outlet property="containerView" destination="HyW-QT-iQH" id="XaG-d9-89E"/>
+                <outlet property="fakeStatusBar" destination="cPe-X6-DiG" id="r2p-4i-N7R"/>
+                <outlet property="metroContainerView" destination="jBp-Td-W4Y" id="nXA-pB-fL5"/>
+                <outlet property="metroTextField" destination="IQt-fu-wHo" id="1D2-eu-eqz"/>
+                <outlet property="metroTextFieldBackground" destination="jXw-5i-IHa" id="idA-23-UK0"/>
+                <outlet property="navView" destination="JTL-lw-24u" id="0Ma-JY-SNf"/>
+                <outlet property="saveScorebordButton" destination="oDH-VD-uB6" id="27r-Kn-kDy"/>
+                <outlet property="sportIconImageView" destination="fuA-1y-CwP" id="lXe-p9-fae"/>
+                <outlet property="sportTextField" destination="yKi-hF-YtT" id="OLL-CP-etW"/>
+                <outlet property="stateContainerView" destination="sub-nM-fKG" id="kLB-aH-dbb"/>
+                <outlet property="stateTextField" destination="Shb-ny-kfF" id="HdM-GK-3JT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cPe-X6-DiG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTL-lw-24u">
+                    <rect key="frame" x="0.0" y="44" width="414" height="72"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a Scoreboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h67-7x-Lct">
+                            <rect key="frame" x="80" y="12" width="253" height="20"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="19"/>
+                            <color key="textColor" name="MPBlackColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Narrow your selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptv-Yl-SVh">
+                            <rect key="frame" x="80" y="38" width="253" height="20"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="13"/>
+                            <color key="textColor" name="MPGrayColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcS-oT-H0J" userLabel="BackButton">
+                            <rect key="frame" x="8" y="7" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                            <state key="normal" image="BackArrowBlack">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonTouched:" destination="-1" eventType="touchUpInside" id="ETq-32-JqJ"/>
+                            </connections>
+                        </button>
+                        <view hidden="YES" contentMode="scaleToFill" id="MQ3-1V-Udd">
+                            <rect key="frame" x="0.0" y="71" width="414" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="MPGrayButtonBorderColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HyW-QT-iQH">
+                    <rect key="frame" x="0.0" y="116" width="414" height="780"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QtP-ZW-ePr">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Only Varsity sports have scoreboards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IK-Xx-Pmj">
+                                    <rect key="frame" x="80" y="10" width="253" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="13"/>
+                                    <color key="textColor" name="MPGrayColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="MPHeaderBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7o-W8-f5u">
+                            <rect key="frame" x="0.0" y="50" width="414" height="70"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sport" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dh-j7-rhI">
+                                    <rect key="frame" x="20" y="8" width="91" height="15"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="13"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a Sport" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKi-hF-YtT">
+                                    <rect key="frame" x="20" y="33" width="374" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="kSW-ZF-bW9"/>
+                                    </connections>
+                                </textField>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SmallDownArrowGray" translatesAutoresizingMaskIntoConstraints="NO" id="iHR-oW-z5t">
+                                    <rect key="frame" x="370" y="48" width="10" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" name="MPDarkGrayColor"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fuA-1y-CwP">
+                                    <rect key="frame" x="32" y="42" width="16" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sub-nM-fKG">
+                            <rect key="frame" x="0.0" y="120" width="414" height="70"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6K-8B-1zF">
+                                    <rect key="frame" x="20" y="8" width="91" height="15"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="13"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-ny-kfF">
+                                    <rect key="frame" x="20" y="33" width="374" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Ytx-X9-AIu"/>
+                                    </connections>
+                                </textField>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SmallDownArrowGray" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-Y5-Yl9">
+                                    <rect key="frame" x="370" y="48" width="10" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" name="MPDarkGrayColor"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBp-Td-W4Y">
+                            <rect key="frame" x="0.0" y="190" width="414" height="70"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXw-5i-IHa">
+                                    <rect key="frame" x="20" y="33" width="374" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter by" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owu-7D-mnO">
+                                    <rect key="frame" x="20" y="8" width="91" height="15"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="13"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQt-fu-wHo">
+                                    <rect key="frame" x="26" y="33" width="345" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="JER-Xt-suS"/>
+                                    </connections>
+                                </textField>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChevronDark" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-UF-eB1">
+                                    <rect key="frame" x="373" y="46" width="6" height="10"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-Kx-sSw">
+                                    <rect key="frame" x="350" y="33" width="40" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="extraMetroButtonTouched:" destination="-1" eventType="touchUpInside" id="ayG-Xq-dEM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixf-A7-2QQ">
+                            <rect key="frame" x="0.0" y="627" width="414" height="154"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Selection:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTQ-tI-f04">
+                                    <rect key="frame" x="80" y="6" width="253" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="13"/>
+                                    <color key="textColor" name="MPGrayColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top 25 National Teams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eK3-44-Uo2">
+                                    <rect key="frame" x="20" y="34" width="374" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="19"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDH-VD-uB6">
+                                    <rect key="frame" x="67" y="72" width="280" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPRedColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="14"/>
+                                    <state key="normal" title="ADD SCOREBOARD">
+                                        <color key="titleColor" name="MPWhiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addScoreboardButtonTouched:" destination="-1" eventType="touchUpInside" id="RLP-yQ-Qy3"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="MPWhiteColor"/>
+            <point key="canvasLocation" x="-49.275362318840585" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackArrowBlack" width="27.5" height="19"/>
+        <image name="ChevronDark" width="8.5" height="14"/>
+        <image name="SmallDownArrowGray" width="8" height="5.5"/>
+        <namedColor name="MPBlackColor">
+            <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPDarkGrayColor">
+            <color red="0.396078431372549" green="0.40000000000000002" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPGrayButtonBorderColor">
+            <color red="0.85098039215686272" green="0.85882352941176465" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPGrayColor">
+            <color red="0.45882352941176469" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPHeaderBackgroundColor">
+            <color red="0.92941176470588238" green="0.93333333333333335" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPRedColor">
+            <color red="0.88235294117647056" green="0.019607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

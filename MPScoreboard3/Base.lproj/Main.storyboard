@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="HsE-Hj-Kwe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-extrabold.otf">
+            <string>Siro-ExtraBold</string>
+        </array>
+        <array key="siro-regular.otf">
+            <string>Siro-Regular</string>
+        </array>
+        <array key="siro-semibold.otf">
+            <string>Siro-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Scores View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ScoresViewController" customModule="MPScoreboard3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZBB-0L-O3g"/>
+                        <viewControllerLayoutGuide type="bottom" id="g8V-q2-aqL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-kH-n6R">
+                                <rect key="frame" x="0.0" y="88" width="414" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scores" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAv-ac-wfx">
+                                        <rect key="frame" x="20" y="4" width="375" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Siro-ExtraBold" family="Siro" pointSize="32"/>
+                                        <color key="textColor" name="MPBlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsS-WE-H9J">
+                                        <rect key="frame" x="0.0" y="55" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="89i-pl-Pac"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="uRA-ed-hfr"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="guI-kY-xRc"/>
+                                        </connections>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHC-NI-4cC">
+                                        <rect key="frame" x="0.0" y="94" width="414" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="MPGrayButtonBorderColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="JZ5-HB-CJz">
+                                <rect key="frame" x="0.0" y="188" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MPHeaderBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="p48-If-ahV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JJh-ug-IeN"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-2y-28g">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woa-6g-QMQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn5-zA-vg5">
+                                        <rect key="frame" x="362" y="4" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="MPBlackColor"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="SearchIconGray" symbolScale="large" renderingMode="template"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7XD-Td-N1m"/>
+                                            <action selector="searchButtonTouched:" destination="zJY-xE-HtN" eventType="touchUpInside" id="BbT-2l-BZz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI1-17-oYC">
+                                        <rect key="frame" x="102" y="11" width="209" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="19"/>
+                                        <color key="textColor" name="MPBlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6F-Jd-cKH">
+                                        <rect key="frame" x="319" y="2" width="39" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="CalendarIcon"/>
+                                        <connections>
+                                            <action selector="calendarButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugJ-Uf-bUN"/>
+                                            <action selector="favoritesButtonTouched:" destination="zJY-xE-HtN" eventType="touchUpInside" id="VEX-Q7-dRJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-xQ-8pQ">
+                                        <rect key="frame" x="272" y="7" width="40" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Test">
+                                            <color key="titleColor" name="MPRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="testButtonTouched" destination="QWx-FF-sgr" eventType="touchUpInside" id="5Mf-H8-gft"/>
+                                            <action selector="testButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KM9-hk-FAt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="MPWhiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hY6-CD-luR"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="dateContainerScrollView" destination="IsS-WE-H9J" id="k1Y-kz-Ry3"/>
+                        <outlet property="fakeStatusBar" destination="tEp-2y-28g" id="BnO-4z-LGG"/>
+                        <outlet property="largeTitleLabel" destination="mAv-ac-wfx" id="kgc-xe-9a9"/>
+                        <outlet property="navTitleLabel" destination="VI1-17-oYC" id="6hL-jn-TqH"/>
+                        <outlet property="navView" destination="woa-6g-QMQ" id="7L6-oi-y2d"/>
+                        <outlet property="scoresTableView" destination="JZ5-HB-CJz" id="Rnz-mT-Dfm"/>
+                        <outlet property="testButton" destination="bZU-xQ-8pQ" id="Tcu-4o-mif"/>
+                        <outlet property="titleContainerView" destination="gLQ-kH-n6R" id="IST-nf-HFb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759.4202898550725" y="131.91964285714286"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="Nit-8X-vy8">
+            <objects>
+                <viewController id="QWx-FF-sgr" customClass="NewsViewController" customModule="MPScoreboard3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kTH-NY-6vX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mj0-91-4n7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yGg-9g-9pX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kq3-Bs-BdR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t00-kr-Hxv">
+                                        <rect key="frame" x="20" y="4" width="375" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Siro-ExtraBold" family="Siro" pointSize="32"/>
+                                        <color key="textColor" name="MPBlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJJ-kW-jep">
+                                        <rect key="frame" x="0.0" y="55" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="YJA-un-qZC"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="BuF-xP-Uiy"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="QWx-FF-sgr" id="67w-3t-GZm"/>
+                                        </connections>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sXc-G2-CxF">
+                                        <rect key="frame" x="0.0" y="94" width="414" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="MPOffWhiteColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nFD-ge-lre">
+                                <rect key="frame" x="0.0" y="188" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MPHeaderBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QWx-FF-sgr" id="8qs-mL-dms"/>
+                                    <outlet property="delegate" destination="QWx-FF-sgr" id="TMS-h5-fD4"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcU-Ou-M2f">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Nq-7M-FV9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qp-bY-d6m">
+                                        <rect key="frame" x="362" y="4" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="MPBlackColor"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="SearchIconGray" symbolScale="large" renderingMode="template"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchButtonTouched:" destination="zJY-xE-HtN" eventType="touchUpInside" id="OqS-jn-j6t"/>
+                                            <action selector="searchButtonTouched:" destination="QWx-FF-sgr" eventType="touchUpInside" id="Uip-fz-dvW"/>
+                                            <action selector="searchButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grM-Pt-RcG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o87-kU-YuQ">
+                                        <rect key="frame" x="102" y="11" width="209" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="19"/>
+                                        <color key="textColor" name="MPBlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-hO-d55">
+                                        <rect key="frame" x="314" y="7" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="--">
+                                            <color key="titleColor" name="MPRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="testButtonTouched" destination="QWx-FF-sgr" eventType="touchUpInside" id="JpI-uT-Snk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aZ-OF-pxX">
+                                        <rect key="frame" x="91" y="7" width="50" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Test">
+                                            <color key="titleColor" name="MPRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="leftTestButtonTouched" destination="QWx-FF-sgr" eventType="touchUpInside" id="pP9-OJ-xy9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ait-ok-uix"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="fakeStatusBar" destination="xcU-Ou-M2f" id="8wh-U3-6iX"/>
+                        <outlet property="filterContainerScrollView" destination="pJJ-kW-jep" id="Ipt-Dh-r3N"/>
+                        <outlet property="largeTitleLabel" destination="t00-kr-Hxv" id="rVW-bm-uHa"/>
+                        <outlet property="leftTestButton" destination="6aZ-OF-pxX" id="Acc-7e-25V"/>
+                        <outlet property="navTitleLabel" destination="o87-kU-YuQ" id="DuC-3Y-ynf"/>
+                        <outlet property="navView" destination="6Nq-7M-FV9" id="YDP-a6-ql2"/>
+                        <outlet property="newsTableView" destination="nFD-ge-lre" id="1bI-VK-agW"/>
+                        <outlet property="testButton" destination="2w1-hO-d55" id="TXr-I6-NXr"/>
+                        <outlet property="titleContainerView" destination="kq3-Bs-BdR" id="CBc-Q1-Alh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y09-sY-LWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759.4202898550725" y="1139.7321428571429"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="Mke-Et-wJx">
+            <objects>
+                <viewController id="zJY-xE-HtN" customClass="FavoriteViewController" customModule="MPScoreboard3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TjN-PB-zb4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ek7-Qi-z4E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Tu-AP-xVR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1u-mD-PcK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Following" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-6H-8wu">
+                                        <rect key="frame" x="20" y="4" width="375" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Siro-ExtraBold" family="Siro" pointSize="32"/>
+                                        <color key="textColor" name="MPBlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFn-HU-6EA">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="MPWhiteColor"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="IKX-1N-j2o"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="vyc-xC-bs3"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="zJY-xE-HtN" id="gbg-0e-WoT"/>
+                                        </connections>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J93-gT-3Ln">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="MPHeaderBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YTI-sM-wYZ">
+                                <rect key="frame" x="0.0" y="188" width="414" height="633"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zJY-xE-HtN" id="Tgs-hH-MAp"/>
+                                    <outlet property="delegate" destination="zJY-xE-HtN" id="Mm5-sK-3QK"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c6Y-Pg-M3r">
+                                <rect key="frame" x="0.0" y="188" width="414" height="633"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NoFavsImage" translatesAutoresizingMaskIntoConstraints="NO" id="jui-M4-o0p">
+                                        <rect key="frame" x="40" y="20" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AyC-gW-qf6">
+                                        <rect key="frame" x="0.0" y="334" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow Teams and Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6f-cV-BBR">
+                                                <rect key="frame" x="67" y="2" width="280" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="15"/>
+                                                <color key="textColor" name="MPBlackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow your favorites to receive the latest news, scores, rankings and more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYf-1E-z08">
+                                                <rect key="frame" x="67" y="25" width="280" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="15"/>
+                                                <color key="textColor" name="MPDarkGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mo-j4-WS1">
+                                                <rect key="frame" x="151" y="94" width="112" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="13"/>
+                                                <state key="normal" title="GET STARTED">
+                                                    <color key="titleColor" name="MPRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchOrSignUpButtonTouched" destination="zJY-xE-HtN" eventType="touchUpInside" id="kN6-tw-EJ1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="MPHeaderBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="MPHeaderBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ug5-hq-EKJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmd-j6-h49">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75w-Te-mLw">
+                                        <rect key="frame" x="362" y="4" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="MPBlackColor"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="SearchIconGray" symbolScale="large" renderingMode="template"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchButtonTouched:" destination="zJY-xE-HtN" eventType="touchUpInside" id="VRf-24-kS6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3T-FQ-eLw">
+                                        <rect key="frame" x="102" y="11" width="209" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="19"/>
+                                        <color key="textColor" name="MPBlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsq-hq-Wg9">
+                                        <rect key="frame" x="327" y="3" width="30" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="16"/>
+                                        <color key="tintColor" name="MPDarkGrayColor"/>
+                                        <state key="normal">
+                                            <color key="titleColor" name="MPDarkGrayColor"/>
+                                            <imageReference key="image" image="slider.horizontal.3" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="favoritesButtonTouched:" destination="zJY-xE-HtN" eventType="touchUpInside" id="6gd-Ph-cSH"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URY-DY-cNn">
+                                        <rect key="frame" x="91" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Test">
+                                            <color key="titleColor" name="MPRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="testButtonTouched" destination="zJY-xE-HtN" eventType="touchUpInside" id="rul-X5-VHe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="MPWhiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="MPWhiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tpr-2W-IYZ"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="athleteContainerScrollView" destination="IFn-HU-6EA" id="bm4-ry-c0o"/>
+                        <outlet property="editFavoritesButton" destination="Dsq-hq-Wg9" id="TMz-qy-Wie"/>
+                        <outlet property="fakeStatusBar" destination="ug5-hq-EKJ" id="2sL-mp-w34"/>
+                        <outlet property="favoritesTableView" destination="YTI-sM-wYZ" id="Rhi-RW-oJw"/>
+                        <outlet property="largeTitleLabel" destination="tF7-6H-8wu" id="A6Z-ol-aW2"/>
+                        <outlet property="navTitleLabel" destination="n3T-FQ-eLw" id="14e-8E-4Sh"/>
+                        <outlet property="navView" destination="Xmd-j6-h49" id="ogK-nd-D3h"/>
+                        <outlet property="noFavoriteContainerView" destination="c6Y-Pg-M3r" id="c5j-Jn-WvH"/>
+                        <outlet property="noFavoriteGetStartedButton" destination="9Mo-j4-WS1" id="7Fv-sU-9jl"/>
+                        <outlet property="noFavoriteInnerContainerView" destination="AyC-gW-qf6" id="Xdk-R3-3YH"/>
+                        <outlet property="noFavoriteMessageLabel" destination="UYf-1E-z08" id="JgW-NT-RDK"/>
+                        <outlet property="noFavoriteTitleLabel" destination="U6f-cV-BBR" id="RCu-Bt-2yx"/>
+                        <outlet property="noFavoritesImageView" destination="jui-M4-o0p" id="dyG-Ql-7kE"/>
+                        <outlet property="titleContainerView" destination="p1u-mD-PcK" id="PwJ-a0-1IW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysu-TE-Hmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759.4202898550725" y="2176.3392857142858"/>
+        </scene>
+        <!--Scores-->
+        <scene sceneID="Hyq-kU-NFg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1iW-8z-96O" customClass="TopNavigationController" customModule="MPScoreboard3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scores" image="ScoresIcon" id="hx5-iw-iEX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0aR-Gy-aYd">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.96005360401459849" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BuI-Y2-t5c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="889-2P-DMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="132"/>
+        </scene>
+        <!--Latest-->
+        <scene sceneID="Qc1-9J-8Dc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nOE-MM-TPn" customClass="TopNavigationController" customModule="MPScoreboard3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Latest" image="LatestIcon" id="leU-gq-jd1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7LS-3d-fCP">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.96005360399999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QWx-FF-sgr" kind="relationship" relationship="rootViewController" id="8VT-Qz-naR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOm-nI-4px" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="1140"/>
+        </scene>
+        <!--Following-->
+        <scene sceneID="NXK-WX-rMf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yqE-9v-CK1" customClass="TopNavigationController" customModule="MPScoreboard3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Following" image="FollowingIcon" id="igr-bu-TfR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="S1a-Ee-UE1">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.96005360399999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zJY-xE-HtN" kind="relationship" relationship="rootViewController" id="knO-vQ-MVu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT4-Eb-NBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="2177"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="YHk-gQ-K6Z">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HsE-Hj-Kwe" customClass="TabBarController" customModule="MPScoreboard3" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="lV7-Tc-kQN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nOE-MM-TPn" kind="relationship" relationship="viewControllers" id="eXT-xY-Tsr"/>
+                        <segue destination="yqE-9v-CK1" kind="relationship" relationship="viewControllers" id="aDU-PO-pcS"/>
+                        <segue destination="1iW-8z-96O" kind="relationship" relationship="viewControllers" id="FTO-7m-yjS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suE-q3-Zts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503.69999999999999" y="131.41333333333333"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CalendarIcon" width="22" height="22"/>
+        <image name="FollowingIcon" width="19" height="23"/>
+        <image name="LatestIcon" width="21" height="18"/>
+        <image name="NoFavsImage" width="350" height="330"/>
+        <image name="ScoresIcon" width="24" height="16"/>
+        <image name="SearchIconGray" width="22" height="22"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
+        <namedColor name="MPBlackColor">
+            <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPDarkGrayColor">
+            <color red="0.396078431372549" green="0.40000000000000002" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPGrayButtonBorderColor">
+            <color red="0.85098039215686272" green="0.85882352941176465" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPHeaderBackgroundColor">
+            <color red="0.92941176470588238" green="0.93333333333333335" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPOffWhiteColor">
+            <color red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPRedColor">
+            <color red="0.88235294117647056" green="0.019607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,185 @@
+{
+  "pins" : [
+    {
+      "identity" : "ats-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/LiveRamp/ats-sdk-ios.git",
+      "state" : {
+        "revision" : "2983fdd06ab861f9286afb2ded727305441f6a67",
+        "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "avia-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cbsinteractive/avia-spm.git",
+      "state" : {
+        "revision" : "44c5be42abc867640c39617bcfb02c4c120ab7a1",
+        "version" : "15.5.0"
+      }
+    },
+    {
+      "identity" : "avia-spm-google-ima-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cbsinteractive/avia-spm-google-ima-ios.git",
+      "state" : {
+        "revision" : "fec35e370e577e7799b2ed9f3dacb5ceafc8e77b",
+        "version" : "3.18.4"
+      }
+    },
+    {
+      "identity" : "avia-spm-imaplugin",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cbsinteractive/avia-spm-imaplugin.git",
+      "state" : {
+        "revision" : "f380212e32aba54d21de052568b09b73066feed5",
+        "version" : "2.5.3"
+      }
+    },
+    {
+      "identity" : "avia-spm-tracking-comscore",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cbsinteractive/avia-spm-tracking-comscore.git",
+      "state" : {
+        "revision" : "e78f02381744520373f54dc7d879a11523f50626",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "avia-spm-tracking-core",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cbsinteractive/avia-spm-tracking-core.git",
+      "state" : {
+        "revision" : "8121a44c63dbf43502be64ef3ed9052ae0c9e6cb",
+        "version" : "3.4.2"
+      }
+    },
+    {
+      "identity" : "avia-spm-tracking-nielsen",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cbsinteractive/avia-spm-tracking-nielsen.git",
+      "state" : {
+        "revision" : "f4033ddd4a29ec4fa814d8c8ff4eefc79fe53cc5",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "avia-spm-ui",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cbsinteractive/avia-spm-ui.git",
+      "state" : {
+        "revision" : "a529322a62ff49cd7ff8daec5fbbbde13eddb8b9",
+        "version" : "7.4.0"
+      }
+    },
+    {
+      "identity" : "googleappmeasurement",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleAppMeasurement.git",
+      "state" : {
+        "revision" : "f54f60d0164d887e1174fa51ab2efe48a8e9d178",
+        "version" : "9.3.0"
+      }
+    },
+    {
+      "identity" : "googleutilities",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleUtilities.git",
+      "state" : {
+        "revision" : "f4abe56ce62a779e64b525eb133c8fc2a84bbc1f",
+        "version" : "7.7.1"
+      }
+    },
+    {
+      "identity" : "ios-branch-sdk-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BranchMetrics/ios-branch-sdk-spm",
+      "state" : {
+        "revision" : "3f44e15cf6cfb73773ac470fdbfb5f2a7c5fd8f2",
+        "version" : "2.1.2"
+      }
+    },
+    {
+      "identity" : "ios-library",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/urbanairship/ios-library",
+      "state" : {
+        "revision" : "61c8b72eafe6b939aa6a07a04bdcd28a315f06a4",
+        "version" : "16.11.3"
+      }
+    },
+    {
+      "identity" : "nanopb",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/firebase/nanopb.git",
+      "state" : {
+        "revision" : "819d0a2173aff699fb8c364b6fb906f7cdb1a692",
+        "version" : "2.30909.0"
+      }
+    },
+    {
+      "identity" : "nimbus-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/timehop/nimbus-ios-sdk",
+      "state" : {
+        "revision" : "419d2a1a70d2b01d6efebd876116a77f474dd909",
+        "version" : "2.8.0"
+      }
+    },
+    {
+      "identity" : "nvactivityindicatorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ninjaprox/NVActivityIndicatorView.git",
+      "state" : {
+        "revision" : "bcb52371f2259254bac6690f92bb474a61768c47",
+        "version" : "5.1.1"
+      }
+    },
+    {
+      "identity" : "otpublishersheadlesssdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Zentrust/OTPublishersHeadlessSDK",
+      "state" : {
+        "revision" : "48dfee2a5fd1cd01497708e92099248142d3b4e7",
+        "version" : "6.33.0"
+      }
+    },
+    {
+      "identity" : "promises",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/promises.git",
+      "state" : {
+        "revision" : "3e4e743631e86c8c70dbc6efdc7beaa6e90fd3bb",
+        "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "qualtrics-digital-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/qualtrics/qualtrics-digital-ios-sdk",
+      "state" : {
+        "revision" : "0d88535a7e46a9e64215a0d0088e0ba2464574b5",
+        "version" : "2.8.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "revision" : "88363fbe76de1a163ddb234b7379096449026d26",
+        "version" : "9.13.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "3b924ce3313a5fd2fc6a8dc889a8c38f76890fe3",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

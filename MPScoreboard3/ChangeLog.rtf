@@ -1,0 +1,436 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 HelveticaNeue;
+}
+{\colortbl;\red255\green255\blue255;\red18\green31\blue60;}
+{\*\expandedcolortbl;;\cssrgb\c9020\c16863\c30196;}
+\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Version 6.0.0, build 220726\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 Initial Release\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.1, build 220805
+\f1\b0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+\cf0 1) Replaced the account settings web view with a native view.\
+2) Added the COPPA code to the ad server.\
+3) Updated Tool Tips 6, 8, and 9 with new images.\
+4) Fixed the broken team standings URL.\
+5) Moved the notifications master enable switch.\
+6) Updated the notifications VC to support email.\
+7) Removed the dependency of the deviceType property in the video players.\
+8) Added cache to the Latest tab article and video cells.\
+9) Fixed various video player crashes.\
+10) Updated the tracking MID to use the Adobe marketing cloud ID.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.2, build 220816
+\f1\b0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+\cf0 1) Added code to handle missing renditions in the video players.\
+2) Updated the Google Ad SDK to V9.8.0.\
+3) Updated the Amazon Ad SDK to V4.1.0.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 4) Updated the FMS 
+\f2\fs28 \cf2 \expnd0\expndtw0\kerning0
+parameter
+\f1\fs24 \cf0 \kerning1\expnd0\expndtw0  "
+\f2 prof=520311%3AGoogleDAICSAI_v01" to "prof=520311%3AGoogleDAICSAI_v01"_COPPA
+\fs28 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\fs24 \cf2 5) Changed the "Invite Coach" web title to "Submit Coach Name" for previous seasons.\
+6) Added the native subscriptions view.\
+7) Added the Branch-IO SDK.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 \kerning1\expnd0\expndtw0 Version 6.0.3, build 220823\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Changed the SDK startup order so Airship is first.\
+2) Updated the master notification enable key so the default is true.\
+3) Updated various scores cells to show the game time instead of "Final" when no score has been entered.\
+4) Updated the email notifications description text to use a different property from the API.\
+5) Added code to prevent the athleteDetailVC from opening if the school is missing.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.4, build 220908\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Updated the team video player design.\
+2) Updated the team home game cell so the entire cell opens the boxscore view.\
+3) Fixed a bug where the rendition iteration was crashing.\
+4) Updated the Avia video player to version 15.0.0. Updated related packages to their latest version.\
+5) Added filtering to remove illegal apostrophes from a web URL.\
+6) Changed the "Top Performers" text to "Team Leaders" on the team home view.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.5, build 220924\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Built with X-Code 14.0.0.
+\f0\b \
+
+\f1\b0 2) Added pull-to-refresh to the web browsers and the Following tab.\
+3) Added auto-rotate to the stand alone video player.\
+4) Updated the team video design to V3.\
+5) Fixed a bug where the follow/unfollow button was erroneously set when selecting a team leader from the team home view.\
+6) Fixed a bug where the follow/unfollow button was erroneously set when selecting a team from the profiles.\
+7) Removed the temporary apostrophe filter from web URLs.\
+8) Changed the code that determines the use of the PreGameWithLive cell to use the "isScorerSignUpAvailable" property.\
+9) Added web deep linking.\
+10) Changed the Apple Tracking dialog logic so it is displayed immediately after app launch.\
+11) Removed the title scaling on the team video center cells.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.6, build 220926\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added code to initialize the kVCID2Key and kVCID2TypeKey to fix the crash due to a slow FMS feed.\
+2) Added code in the various video headers and cells to prevent a crash if the publish date is malformed.\
+3) Added code to prevent loading the athlete stats cells if there is no data returned.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.7, build 221006\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added an error message in roster copy if there was no previous roster to copy.\
+2) Added an error message when copying previous schedules that failed.\
+3) Added an error message when adding or editing an opponent team that doesn't exist.\
+4) Added code to remove any active web browser when a notification or web deep link is received.\
+5) Added the career video center.\
+6) Added career, team, and alternate web deep linking.\
+7) Fixed an issue where the bottom of the team home page was obscured by the ad if the tab bar was dimmed.\
+8) Fixes the Latest tab crash due to null league standings data.\
+9) Updated the calendar unsubscribe message for iOS 15 and above.\
+10) Updated the MaxPreps icon on the calendar subscription alert.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.8, build 221012\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added the weather to the scores tab.\
+2) Removed my team from the list of schedule opponents.\
+3) Added support for 6/8/9 man football arena rankings.\
+4) Added code to block deep linking if the user is not logged in.\
+5) Fixed a bug with the teamDetailVC missing school city and state properties when accessed from the sports arenas.\
+6) Added the OneTrust SDK.\
+7) Added the privacy parameters to banner ads and the freewheel URL.\
+8) Added Branch event tracking.\
+9) Fixed a notification crash when the URL is missing.\
+10) Fixed an occasional crash when updating a contest with a TBA opponent.\
+11) Updated the get_video_info URL to add the query parameter "useelasticsearch=1".\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.0.9, build 221028\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added deferred deep linking.\
+2) Fixed an issue with 6/8/9 man rankings not showing up for divisions that are named "Class" or "Region".\
+3) Fixed a crash when changing your email to one that includes a whitespace.\
+4) Updated the mini career view to a new layout.\
+5) Added support for the "HLS" video assetType.\
+6) Added Airship's deep link handler to call the Branch handler.\
+7) Updated all radio buttons to use the same icon.\
+8) Fixed an issue where the career view was showing the follow/unfollow buttons for guests.\
+9) Fixed an issue where auto-play permission was ignored for the team and career video centers.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.0, build 221116\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Fixed an issue where the social buttons weren't working on the mini-career view.\
+2) Fixed an issue where the tab bar reappears on the TeamVideoCenter when returning from a tagged athlete's career page.\
+3) Fixed the wrong colors on the career quick stats cells for multi-school athletes.\
+4) Removed audio variants from the rendition parse code.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.1, build 221216\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Updated athlete search to call the API each time the filter changes.\
+2) Added code to remove the ad and disable the ad timer when going into the background.\
+3) Added code to call the increment video API whenever a video is played.\
+4) Added the Qualtrics survey.\
+5) Added the roster count to the roster header.\
+6) Added the game count to the schedule header.\
+7) Fixed a crash when a user opts out of the camera permission.\
+8) Changed the update athlete and update coach profiles to expose the API error message (Facebook URL validation).\
+9) Added special offers to the user profiles.\
+10) Forwarded the deep link ftag to the team-home, career-home, and full screen video player tracking.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.2, build 230217
+\f1\b0 \
+1) Moved the sign out button to the user profiles.\
+2) Added support for non-core sports awards.\
+3) Added the career video upload feature.\
+4) Added the team video upload feature.\
+5) Added video contributions to all profiles.\
+6) Fixed a layout bug on the login screen for devices that have the dynamic island.\
+7) Added current video playback status to the video center cells.\
+8) Fixed the crash when creating a new account with a whitespace in the email.\
+9) Added athlete untagging to the career video center.\
+10) Updated the tracking file. Changed the career and team video center tracking keys.\
+11) Added the video upload tooltips.\
+12) Fixed a layout issue with the follow/unfollow buttons on the team and career pages for devices the have the dynamic island.\
+13) Added notification tracking.\
+\
+
+\f0\b Version 6.1.3, build 230219
+\f1\b0 \
+1) Added a character count to the report video screen. Removed auto-clear.\
+2) Added the ability for an athlete (or parent) to untag himself from a team video.\
+3) Replaced the legacy get video details feed with a modern API.\
+4) Added a deep link to the team videos page.\
+5) Change the ad refresh timer to 30 seconds.\
+6) Reduced the NCSA years array end by one year. Changed the changeover date to 9/1.\
+7) Fixed a crash when expanding HUDL videos in the team and career video centers.\
+\
+
+\f0\b Version 6.1.4, build 230302\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added a copyright message to all photo upload instances.\
+2) Updated the Branch SDK to Version 2.0.0.\
+3) Added a "Join" button for guest users that see the "Membership Required" or "Guest Login" alert.\
+4) Fixed a bug that caused the tooltip one to be opened twice after login.\
+5) Updated the team and career video tooltips to be subviews rather than overlay windows.\
+6) Updated the team and career header to use the new layouts.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.5, build 230314\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added the Nimbus SDK and DynamicPriceManager.\
+2) Replaced all banner ad code with Nimbus bidding code.\
+3) Updated the Freewheel generator code to support matrix.\
+4) Added the conduit parameter ("givn") to the Freewheel generator.\
+5) Moved the top notch calculation into the scene delegate.\
+6) Fixed a video center crash when a video finished or is paused with the active cell offscreen.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.6, build 230317\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Updated all video players to use the streamingUrl instead of the pid for MPX videos.\
+2) Added code to reload the newsVideoHeader (via the buildSportFilters method) after login.\
+3) Added code to stop the newsVideoHeader when going to the background. This prevents the Now Playing from showing.\
+4) Fixed a bug where the team video center gets stuck in a loop when coming from a deep link.
+\f0\b \
+
+\f1\b0 5) Updated the get user-favorite-careers feed to support the notificationSettings object.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.7, build 230320\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Fixed the weak self reference in the Nimbus code that is causing crashes in the field.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.8, build 230410\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Updated the notifications screens to include career notifications.\
+2) Fixed a crash while opening a career page without a school.\
+3) Moved the upload team video and upload career video tracking code to when the Video Details page is called.\
+4) Added support for audio mixing.\
+5) Added the year to the sports arena stats header.\
+6) Only display the movement on the sports arena rankings view for national and state filters.\
+7) Added an FAQ footer to the sports arena stats table.\
+8) Updated the dark tab bar icons and text color\
+9) Changed the font size and text case on the scores and latest tabs pills.\
+10) Updated the duration labels on various video center cells.\
+11) Added a deep link to the career videos page.\
+12) Removed the SKAdNetworks Plist items.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.1.9, build 230502\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added contest notifications (MPA-1615, MPA-1617, MPA_1627, MPA-1629).\
+2) Updated the get-video-info code to use the "externalVideoUrl" property if it is available (MPA-1613).\
+3) Update the team tab bar code to include "hasStandings" for the standings tab visibility (MPA-1619).\
+4) Added a state filter to team search (MPA-1625).\
+5) Updated the getNationalSportSeasons API (MPA-1633).\
+6) Updated the privacy policy link and removed the cookie policy link (MPA-1632).\
+7) Added new SKAdNetworks items (MPA-1588).\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.0, build 230503\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Same code base as V6.1.9. Needed to update the store privacy policy URL.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.1, build 230505\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Updated Avia and associated SDKs (MPA-1535).\
+2) Moved the "_fw_us_privacy" parameter to the freewheel custom dictionary (MPA-1644).\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.2, build 230508\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Updated the Nimbus SDK.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.3, build 230626\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) New career profile design.\
+2) New edit career design.\
+3) New staff profile design.\
+4) New edit staff design.\
+5) Updated all textViews to detect excess characters when pasting.\
+6) Updated the mini career view.\
+7) Removed the edit child buttons on the parent, coach, and AD profiles.\
+8) Updated the Branch SDK to V2.1.2.\
+9) New athlete user profile design.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.4, build 230802\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Removed the freewheel parameter "_fw_app_bundle".\
+2) Added code to restart the video player on the latest tab after returning from a web deep link.\
+3) Added A/B testing to the banner ad requests.\
+4) New parent user profile.\
+5) New fan user profile.\
+6) New coach user profile.\
+7) New AD user profile.\
+8) New guest user profile.\
+9) Added team schedule, rankings, photos and notifications deep linking.\
+10) Added PBP and playoff cards to the teamDetailVC.\
+11) Updated some text in the legal view and added the "California Notice" item.\
+12) Fixed a height issue with the web browser when an ad is displayed.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.5, build 230820\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Changed the minimum iOS version to 15.0.\
+2) Added a new career profile tab with V3 academics and measurements.\
+3) Added code to prevent the latest tab video from restarting when returning from full screen.\
+4) Added code to prevent the web browser from crashing due to an invalid URL.\
+5) Added code to handle missing schoolColor1 in the getSchoolInfo API.\
+6) Fixed the issue with modal views that disappear randomly.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.6, build 230910\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Added some new parameters to the video tracking (MPA-1949).\
+2) Added V3 achievements and awards.\
+3) Added V3 extracurriculars.\
+4) Added notification and deep links to the career profile tab.\
+5) Added pull-to-refresh to the native team home page.\
+6) Added a school search filter to the scoreboards view.\
+7) Updated notification tracking to include academics and measurements.\
+8) Rearranged the order of the team home tab cards.\
+9) Removed refresh control text everywhere.\
+10) Updated the team tab bar code to remove "hasLeagueStandings" for the standings tab visibility (MPA-1885).\
+11) Updated the non-core sport schedule URL (MPA-1888).\
+12) Fixed an issue with the banner ad not showing when returning from the team roster, schedule, etc.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.7, build 230925\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 1) Moved the career APIs to their own class.\
+2) Added banner video to the modal web view.\
+3) Added banner video to the push web view.\
+4) Updated the icons and progress bar color on all video players.\
+5) Added code to the Nimbus DynamicPriceManager to set self.continuation to nil after a resume.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Version 6.2.8, build 231003
+\f1\b0 \
+1) Added itemType to the contest and team notification packets so the web browsers will display the video banner ad.\
+2) Added "_fw_is_lat" and "_fw_coppa" to the freewheel generator.\
+3) Added "tfcd" property for banner ads.\
+4) Updated the Twitter icons and message text to "X".\
+5) Added code to reject contest dates that won't convert on the schedule, scores, and scoreboard views.\
+6) Added auto-play to the sports arena\'92s latest tab video player.\
+7) Added video restart to the latest tab video player.\
+8) Added code to rebuild the scores tab dates when returning from the background.\
+\
+
+\f0\b Version 6.2.9, build 231005
+\f1\b0 \
+1) Added more malformed contest date detection.\
+2) Updated the tab selector text to use lowercase.\
+\
+
+\f0\b Version 6.3.0, build 231019
+\f1\b0 \
+1) Increased the banner video close button timing to 6 seconds.\
+2) Fixed the latest tab and sports arena video player flash when returning from full screen.\
+3) Updated the "ccpaString" used in the banner ads and freewheel generator to include "isUserMinorAged" property.\
+4) Updated the comScore and Nimbus initialization using privacy settings..\
+5) Gated Nielson and Qualtrics based upon privacy settings.\
+6) Added a playoffs tab to the sports arenas.\
+7) Added deep linking into the sports arena playoffs tab.\
+8) Added sport-playoffs to the Tracking.csv file.\
+9) Changed all the IQActionSheetPickerView buttons to HelveticaNeue-Medium, 19.\
+\
+
+\f0\b Version 6.3.1, build 231101
+\f1\b0 \
+1) Updated to XCode 15.0.1.\
+2) Added rankings to top national teams scoreboards.\
+3) Added code to disable the share button on the web browsers if a bad url is detected.\
+4) Changed the scores and scoreboard buttons to use lowercase.\
+5) Added code to auto-populate various national scoreboards once.\
+6) Hide the privacy item on the legal page if user is a minor.\
+7) Changed the banner ad refresh time to 100000 seconds.\
+8) Updated the privacy logic used throughout the app.\
+9) Added code to reload the team home page banner ad when returning from a child screen.\
+\
+
+\f0\b Version 6.3.2, build 231120
+\f1\b0 \
+1) Fixed an issue where the arena buttons were unresponsive after first launch.\
+2) Added deep linking for achievements/awards and extracurricular notifications.\
+3) Added the "coppa" property to Nimbus init.\
+4) Add the FMS "uid2" property to the Nimbus init.\
+5) Added careerId to page and video tracking.\
+6) Added code to dismiss any latest tab childVCs when a tooltip is about to be displayed.\
+7) Added code to replay the full screen video player when the video finishes.\
+8) Added the vertical video player for MaxPreps shorts (disabled for app release).\
+\
+
+\f0\b Version 6.3.3, build 231122
+\f1\b0 \
+1) Added video shorts to the latest tab.}

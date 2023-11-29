@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-semibold.otf">
+            <string>Siro-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestModalViewController" customModule="MPScoreboard3" customModuleProvider="target">
+            <connections>
+                <outlet property="fakeStatusBar" destination="Gdr-VC-4Jm" id="9nD-Fg-TH8"/>
+                <outlet property="navView" destination="0AL-Uj-vs8" id="kZH-dc-XXT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gdr-VC-4Jm">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0AL-Uj-vs8">
+                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfv-sp-s9z">
+                            <rect key="frame" x="16" y="7" width="57" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="16"/>
+                            <state key="normal" title="DONE">
+                                <color key="titleColor" name="MPDarkGrayColor"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonTouched:" destination="-1" eventType="touchUpInside" id="bUY-nC-NzZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parent Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieA-7x-oeT">
+                    <rect key="frame" x="16" y="105" width="136" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <color key="textColor" name="MPRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOd-TQ-AtG">
+                    <rect key="frame" x="16" y="130" width="343" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <state key="normal" title="Athlete already claimed as my child">
+                        <color key="titleColor" name="MPDarkGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="button1Touched:" destination="-1" eventType="touchUpInside" id="zT3-Kv-Jv3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhW-5u-LFp">
+                    <rect key="frame" x="16" y="165" width="343" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <state key="normal" title="Parent has too many athletes">
+                        <color key="titleColor" name="MPDarkGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="button2Touched:" destination="-1" eventType="touchUpInside" id="uog-eb-auh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jto-2J-CPE">
+                    <rect key="frame" x="16" y="200" width="343" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <state key="normal" title="Athlete has too many parents">
+                        <color key="titleColor" name="MPDarkGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="button3Touched:" destination="-1" eventType="touchUpInside" id="B0u-QR-nrF"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Athlete Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxz-Gh-JZL">
+                    <rect key="frame" x="16" y="260" width="141" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <color key="textColor" name="MPRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N94-u4-pzV">
+                    <rect key="frame" x="16" y="285" width="343" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <state key="normal" title="Athlete already claimed as me">
+                        <color key="titleColor" name="MPDarkGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="button4Touched:" destination="-1" eventType="touchUpInside" id="oa1-8q-ke3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFn-Vu-NSN">
+                    <rect key="frame" x="16" y="320" width="343" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <state key="normal" title="User bound to another athlete">
+                        <color key="titleColor" name="MPDarkGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="button5Touched:" destination="-1" eventType="touchUpInside" id="PBT-wu-Mqm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdm-ZH-AcF">
+                    <rect key="frame" x="16" y="355" width="343" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <state key="normal" title="Athlete bound to another user">
+                        <color key="titleColor" name="MPDarkGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="button6Touched:" destination="-1" eventType="touchUpInside" id="0vp-Wc-UrJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS1-7B-8jh">
+                    <rect key="frame" x="16" y="390" width="343" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                    <state key="normal" title="Last name doesn't match athlete">
+                        <color key="titleColor" name="MPDarkGrayColor"/>
+                    </state>
+                    <connections>
+                        <action selector="button7Touched:" destination="-1" eventType="touchUpInside" id="pWJ-hv-fqE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <point key="canvasLocation" x="132" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="MPDarkGrayColor">
+            <color red="0.396078431372549" green="0.40000000000000002" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPRedColor">
+            <color red="0.88235294117647056" green="0.019607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-regular.otf">
+            <string>Siro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsVideoCenterViewController" customModule="MPScoreboard3" customModuleProvider="target">
+            <connections>
+                <outlet property="fakeStatusBar" destination="W5M-0T-h4R" id="PAD-mW-o45"/>
+                <outlet property="inlinePlayerContainerView" destination="atC-Il-MHe" id="T7D-3g-7bN"/>
+                <outlet property="navView" destination="ZtH-Vu-mZe" id="zCD-NY-PHV"/>
+                <outlet property="playIconBackgroundView" destination="teB-nh-yLy" id="5rh-Pq-FDt"/>
+                <outlet property="thumbnailImageView" destination="HPJ-Yw-fFt" id="TKO-yu-97h"/>
+                <outlet property="timeLabel" destination="2it-4o-7Bz" id="mGN-Xr-t3q"/>
+                <outlet property="titleContainerSubtitleLabel" destination="l4t-79-QEP" id="RBS-qF-NQG"/>
+                <outlet property="titleContainerTitleLabel" destination="48F-v2-RRd" id="PNk-Le-zwM"/>
+                <outlet property="titleContainerView" destination="bkc-cH-r1E" id="Dgn-or-ElF"/>
+                <outlet property="videoFadeBackgroundImageView" destination="unQ-QQ-6g2" id="pWm-sk-epi"/>
+                <outlet property="videoPlayButton" destination="kd0-DH-La7" id="bnS-To-Vjg"/>
+                <outlet property="videoTableView" destination="KPX-OZ-0UR" id="AxI-zd-W9A"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5M-0T-h4R">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="MPBlackColor"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZtH-Vu-mZe">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q4-jp-dyu" userLabel="BackButton">
+                            <rect key="frame" x="10" y="7" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                            <state key="normal" image="BackArrowWhite">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonTouched:" destination="-1" eventType="touchUpInside" id="hSq-hj-4x0"/>
+                            </connections>
+                        </button>
+                        <view hidden="YES" contentMode="scaleToFill" id="ril-Yi-ChU">
+                            <rect key="frame" x="0.0" y="43" width="414" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <viewLayoutGuide key="safeArea" id="ofY-Ff-Elc"/>
+                            <color key="backgroundColor" name="MPGrayColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="MPBlackColor"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TestVideo" translatesAutoresizingMaskIntoConstraints="NO" id="HPJ-Yw-fFt">
+                    <rect key="frame" x="0.0" y="88" width="414" height="233"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="teB-nh-yLy">
+                    <rect key="frame" x="176" y="176" width="62" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewsVideoPlayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vof-WE-FaW">
+                            <rect key="frame" x="23" y="19" width="21" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" name="MPWhiteColor"/>
+                        </imageView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="fh6-mk-scb"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.12941176469999999" blue="0.12941176469999999" alpha="0.54767684429999997" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VideoFadeDarkBackground" translatesAutoresizingMaskIntoConstraints="NO" id="unQ-QQ-6g2">
+                    <rect key="frame" x="0.0" y="260" width="414" height="61"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="2it-4o-7Bz">
+                    <rect key="frame" x="348" y="293" width="50" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                    <color key="textColor" name="MPOffWhiteColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd0-DH-La7">
+                    <rect key="frame" x="176" y="176" width="62" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="videoPlayButtonTouched" destination="-1" eventType="touchUpInside" id="grB-Ya-as5"/>
+                    </connections>
+                </button>
+                <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atC-Il-MHe">
+                    <rect key="frame" x="0.0" y="88" width="414" height="233"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="white" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KPX-OZ-0UR">
+                    <rect key="frame" x="0.0" y="413" width="414" height="449"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="MPBlackColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="UEi-fg-c8N"/>
+                        <outlet property="delegate" destination="-1" id="waH-0O-rIm"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkc-cH-r1E">
+                    <rect key="frame" x="0.0" y="321" width="414" height="92"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title Container that contains enough text to take up two lines." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48F-v2-RRd">
+                            <rect key="frame" x="16" y="14" width="382" height="40"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="15"/>
+                            <color key="textColor" name="MPWhiteColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 21, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="l4t-79-QEP">
+                            <rect key="frame" x="16" y="60" width="175" height="18"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                            <color key="textColor" name="MPGrayButtonBorderColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oou-1e-KlI">
+                            <rect key="frame" x="16" y="91" width="382" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.2436420613405656" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="MPBlackColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="MPBlackColor"/>
+            <point key="canvasLocation" x="131.8840579710145" y="72.991071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackArrowWhite" width="27.5" height="21"/>
+        <image name="NewsVideoPlayIcon" width="27" height="31"/>
+        <image name="TestVideo" width="375" height="211"/>
+        <image name="VideoFadeDarkBackground" width="215" height="61"/>
+        <namedColor name="MPBlackColor">
+            <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPGrayButtonBorderColor">
+            <color red="0.85098039215686272" green="0.85882352941176465" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPGrayColor">
+            <color red="0.45882352941176469" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPOffWhiteColor">
+            <color red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

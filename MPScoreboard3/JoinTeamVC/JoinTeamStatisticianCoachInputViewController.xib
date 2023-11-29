@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-light.otf">
+            <string>Siro-Light</string>
+        </array>
+        <array key="siro-regular.otf">
+            <string>Siro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JoinTeamStatisticianCoachInputViewController" customModule="MPScoreboard3" customModuleProvider="target">
+            <connections>
+                <outlet property="coachContactContainerView" destination="psi-wR-jA0" id="Tyu-N9-Dm2"/>
+                <outlet property="containerScrollView" destination="t8A-dI-hMG" id="stQ-dJ-Nel"/>
+                <outlet property="emailBackgroundView" destination="csG-4d-eFB" id="4UE-mm-Anl"/>
+                <outlet property="emailTextField" destination="UcZ-ZY-c2E" id="e5V-Ca-16q"/>
+                <outlet property="firstNameBackgroundView" destination="eeo-wW-0gD" id="h7W-5l-gaP"/>
+                <outlet property="firstNameTextField" destination="MbF-hI-pkk" id="U4s-om-jy1"/>
+                <outlet property="lastNameBackgroundView" destination="3ju-37-d5E" id="Png-Hp-sP5"/>
+                <outlet property="lastNameTextField" destination="1zJ-Pe-FzC" id="XJl-SY-RIH"/>
+                <outlet property="navView" destination="HAb-Va-CE8" id="V7u-gf-23E"/>
+                <outlet property="nextButton1" destination="nEf-y2-DNS" id="W8W-Nh-f4g"/>
+                <outlet property="nextButton2" destination="EtJ-wZ-cgD" id="mQt-WF-UFa"/>
+                <outlet property="selectCoachBackgroundView" destination="Rfb-0U-3sU" id="VeS-aw-eDh"/>
+                <outlet property="selectCoachLabel" destination="ZOM-59-81O" id="9VC-JQ-ySv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAb-Va-CE8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFU-G0-N85" userLabel="BackButton">
+                            <rect key="frame" x="10" y="52" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                            <state key="normal" image="BackArrowWhite">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonTouched:" destination="-1" eventType="touchUpInside" id="ZtF-Hs-GuJ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Request Admin Access" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-Pe-tdx" userLabel="Title">
+                            <rect key="frame" x="61" y="56" width="253" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="17"/>
+                            <color key="textColor" name="MPWhiteColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="MPRedColor"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8A-dI-hMG">
+                    <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To send a request, select a coach from the dropdown menu below." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HyM-4F-Pbg">
+                            <rect key="frame" x="24" y="39" width="327" height="60"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Light" family="Siro" pointSize="20"/>
+                            <color key="textColor" name="MPWhiteColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Coach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ6-zP-C9f">
+                            <rect key="frame" x="20" y="124" width="120" height="23"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="17"/>
+                            <color key="textColor" name="MPWhiteColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfb-0U-3sU">
+                            <rect key="frame" x="20" y="155" width="335" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Coach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-59-81O">
+                                    <rect key="frame" x="16" y="11" width="280" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                                    <color key="textColor" name="MPWhiteColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SmallDownArrowWhite" translatesAutoresizingMaskIntoConstraints="NO" id="7uj-xT-7Zv">
+                                    <rect key="frame" x="307" y="18" width="12" height="8"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD8-tt-ca4">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="selectCoachButtonTouched:" destination="-1" eventType="touchUpInside" id="H9M-xG-MZh"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.75294117647058822" green="0.015686274509803921" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEf-y2-DNS">
+                            <rect key="frame" x="20" y="627" width="335" height="40"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="NEXT">
+                                        <attributes>
+                                            <color key="NSColor" name="MPRedColor"/>
+                                            <font key="NSFont" size="15" name="Siro-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </state>
+                            <connections>
+                                <action selector="nextButtonTouched:" destination="-1" eventType="touchUpInside" id="9pE-Lb-PHl"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psi-wR-jA0">
+                            <rect key="frame" x="20" y="223" width="335" height="467"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTT-Ae-u9Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coach Contact Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sb-Cd-Cdq">
+                                    <rect key="frame" x="0.0" y="16" width="156" height="23"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="17"/>
+                                    <color key="textColor" name="MPWhiteColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-wW-0gD">
+                                    <rect key="frame" x="0.0" y="47" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name*" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MbF-hI-pkk">
+                                            <rect key="frame" x="16" y="5" width="303" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" name="MPWhiteColor"/>
+                                            <accessibility key="accessibilityConfiguration" label="Registration"/>
+                                            <color key="textColor" name="MPWhiteColor"/>
+                                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="xtI-zm-0GR"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.75294117650000003" green="0.015686274510000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ju-37-d5E">
+                                    <rect key="frame" x="0.0" y="103" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name*" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1zJ-Pe-FzC">
+                                            <rect key="frame" x="16" y="5" width="303" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" name="MPWhiteColor"/>
+                                            <accessibility key="accessibilityConfiguration" label="Registration"/>
+                                            <color key="textColor" name="MPWhiteColor"/>
+                                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="hi9-XS-zLi"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.75294117650000003" green="0.015686274510000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csG-4d-eFB">
+                                    <rect key="frame" x="0.0" y="159" width="335" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email*" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UcZ-ZY-c2E">
+                                            <rect key="frame" x="16" y="5" width="303" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" name="MPWhiteColor"/>
+                                            <accessibility key="accessibilityConfiguration" label="Registration"/>
+                                            <color key="textColor" name="MPWhiteColor"/>
+                                            <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="XFu-1n-jRq"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.75294117650000003" green="0.015686274510000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EtJ-wZ-cgD">
+                                    <rect key="frame" x="0.0" y="223" width="335" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="NEXT">
+                                                <attributes>
+                                                    <color key="NSColor" name="MPRedColor"/>
+                                                    <font key="NSFont" size="15" name="Siro-Bold"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <connections>
+                                        <action selector="nextButtonTouched:" destination="-1" eventType="touchUpInside" id="1zE-xZ-4cg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="MPRedColor"/>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Asu-Fm-TOk"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="RuK-r3-fAI"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="MPRedColor"/>
+            <point key="canvasLocation" x="132" y="72.413793103448285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackArrowWhite" width="27.666666030883789" height="20.333333969116211"/>
+        <image name="SmallDownArrowWhite" width="8" height="5.3333334922790527"/>
+        <namedColor name="MPRedColor">
+            <color red="0.88235294117647056" green="0.019607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

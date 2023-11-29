@@ -1,0 +1,266 @@
+{
+        "Adobe": {
+            "enabled": true,
+            "params": {
+                "trackerCommands": {
+                    "debugLogging":"true",
+                    "sendUndefined": "false",
+                    "liveResetInterval": "0",
+                    "pingInterval":"10",
+                    "liveSegmentId3Owner":"com.cbsi.live.sg",
+                },
+                "serverInfo": {
+                    "apiServer": "http://cbs-stage.hb-api.omtrdc.net",
+                    "sessionEndPoint": "/api/v1/sessions",
+                    "eventEndPoint": "/events",
+                },
+                "sessionInfo": {
+                    "analytics.trackingServer": "om.cbsi.com",
+                    "analytics.reportSuite": "cbsicbsiall-dev",
+                    "analytics.enableSSL": "false",
+                    "visitor.marketingCloudOrgId": "10D31225525FF5790A490D4D@AdobeOrg",
+                    "visitor.marketingCloudUserId": "{context.visitorId}",
+                },
+                "mediaInfo": {
+                    "media.id": "{data.customAppProps.liveAssetIdForHB} || {data.mediaIdForTracking}",
+                    "media.length": "{data.isLive} ? 86400 : {context.inbuilt.duration}",
+                    "media.playerName": "{data.playerName}",
+                    "media.contentType": "{data.isLive}  ? Live : VOD",
+                    "media.name": "{data.contentVideoTitle} || n/a",
+                    "media.channel": "CBS All Access",
+                    "media.network": "CBS All Access",
+                    "media.sdkVersion": "{data.playerVersion}",
+                    "media.resume": "{context.hasSessionResumed} || false",
+                },
+                "adBreakInfo": {
+                    "media.ad.podFriendlyName": "{data.adModel.adTitle} || n/a",
+                    "media.ad.podIndex": "{context.inbuilt.ad.podIndex}",
+                    "media.ad.podSecond": "{context.inbuilt.ad.podSecond}"
+                },
+                "adInfo": {
+                    "media.ad.name": "{data.adModel.adTitle} || n/a",
+                    "media.ad.id": "{data.adModel.adID} || n/a",
+                    "media.ad.length": "{data.adModel.adDuration}",
+                    "media.ad.playerName": "{data.playerName}",
+                    "media.ad.podPosition": "{data.adModel.adPositionInPod}"
+                },
+                "customMetadata": {
+                    "mediaResume": "{context.hasSessionResumed} || false",
+                    "mediaSpecial": "{context.specialValue}",
+                    "mediaKey":"{data.customAppProps.someValue}"
+                },
+                "qoeData": {
+                    "media.qoe.bitrate": "{context.inbuilt.bitrate}"
+                },
+                "errorData": {
+                    "media.qoe.errorID": "{data.cvpErrorCode}",
+                    "media.qoe.errorSource": "player",
+                },
+                "dataType": {
+                    "debugLogging":"boolean",
+                    "sendUndefined":"boolean",
+                    "liveResetInterval":"int",
+                    "pingInterval":"int",
+                    "analytics.enableSSL": "boolean",
+                    "media.length": "int",
+                    "media.resume": "boolean",
+                    "media.ad.podIndex": "int",
+                    "media.ad.podSecond": "int",
+                    "media.ad.length": "int",
+                    "media.ad.podPosition": "int",
+                    "media.qoe.bitrate":"float",
+                    "media.chapter.index":"int",
+                    "media.chapter.offset":"float",
+                    "media.chapter.length":"float"
+                }
+            }
+        },
+        "Nielsen": {
+            "enabled": true,
+            "params": {
+                "trackerCommands": {
+                    "sendUndefined": "true",
+                    "id3Prefix":"www.nielsen.com",
+                    "isDtvr": "{context.isDTVR}",
+                },
+                "serverInfo": {
+                },
+                "sessionInfo": {
+                    "appid": "{context.appId}",
+                    "appname": "{context.appName}",
+                    "appversion": "{context.appVersion}",
+                    "sfcode": "{context.sfCode}",
+                    "nol_devDebug": "INFO",
+                },
+                "dtvrInfo": {
+                    "adModel": "1",
+                    "dataSrc": "id3",
+                    "adloadtype": "1",
+                },
+                "dcrInfo": {
+                    "dataSrc": "cms",
+                    "type": "content",
+                    "assetid": "{data.mediaIdForTracking}",
+                    "tv": "{data.platformModel.tvRating} ? true : false",
+                    "category": "{data.platformModel.tpSeriesTitle} || na",
+                    "title": "{context.inbuilt.formattedTitle} || na",
+                    "program": "{data.platformModel.tpSeriesTitle} || na",
+                    "airdate": "{context.airDateString} || na",
+                    "isFullEpisode": "{data.platformModel.tpEpisodeFlag} ? y : n",
+                    "crossId1": "{context.inbuilt.crossId1}",
+                    "crossId2": "CBS",
+                    "adloadtype": "2",
+                    "length": "{data.isLive} ? 86400 : {context.inbuilt.duration}",
+                },
+                "adInfo": {
+                    "type": "{context.inbuilt.adType}",
+                    "assetid": "{data.adModel.adID}",
+                },
+                "dataType": {
+                    "sendUndefined":"boolean",
+                    "isDtvr":"boolean",
+                }
+            }
+        },
+        "MUX": {
+            "enabled": true,
+            "params": {
+                "trackerCommands": {
+                    "sendUndefined": "false",
+                },
+                "playerData": {
+                    "propertyKey": "1778b90ad19424061a4c8920a",
+                    "environmentKey": "1778b90ad19424061a4c8920a",
+                    "experimentName": "oviodo",
+                    "playerName": "{data.playerName}",
+                    "playerVersion": "{data.playerVersion}",
+                    "viewerUserId": "{data.userId}",
+                },
+                "videoData": {
+                    "videoId": "{data.mediaIdForTracking}",
+                    "videoTitle": "{data.contentVideoTitle} || n/a",
+                    "videoStreamType": "{data.isLive}  ? live : on-demand",
+                    "videoDuration": "{data.isLive} ? 86400 : {context.inbuilt.duration}",
+                    "videoIsLive": "{data.isLive}",
+                    "videoSeries": "{data.platformModel.tpSeriesTitle} || na",
+                },
+                "dataType": {
+                    "sendUndefined":"boolean",
+                    "videoDuration":"int",
+                    "videoIsLive":"boolean",
+                }
+            }
+        },
+        "Comscore": {
+            "enabled": true,
+            "params": {
+                "trackerCommands": {
+                    "sendUndefined": "false",
+                },
+                "sessionInfo":{
+                   "publisherId":"3005086"
+                },
+                "contentInfo": {
+                    "c2" : "3005086",
+                    "c3": "{context.appName}",
+                    "c4": "All Access",
+                    "c6": "{context.reportingTitle}",
+
+                    "ns_st_ci": "{context.mediaId} || {data.platformModel.contentVideoMediaID}",
+                    "ns_st_cl": "{context.inbuilt.duration}",
+                    "ns_st_pu": "{context.publisherBrand}",
+                    "ns_st_pr": "{data.isLive} ? {context.reportingTitle} : {context.showTitle}",
+                    "ns_st_ep": "{context.episodeTitle}",
+                    "ns_st_sn": "{context.seasonNumber}",
+                    "ns_st_en": "{context.episodeNumber}",
+                    "ns_st_ge": "{context.genre} || {data.platformModel.genreCBS}",
+                    "ns_st_ia": "{context.inbuilt.isAd} ? 1 : 0",
+                    "ns_st_st": "{context.stationInfo}",
+                    "ns_st_ce": "{context.isFullEpisode} ? 1 : 0",
+                    "ns_st_ddt": "*null",
+                    "ns_st_tdt": "{context.airDateString}",
+                    "ns_st_ti": "{context.TMSSeriesID}",
+                    "ns_ap_an": "Skinner Testing App",
+                },
+                "dataType": {
+                    "sendUndefined":"boolean",
+                }
+            }
+        },
+        "Conviva": {
+            "enabled": true,
+            "params": {
+                "trackerCommands": {
+                    "sendUndefined": "false",
+                },
+                "sessionInfo": {
+                    "customerKey": "87a6b28bc7823e67a5bb2a0a6728c702afcae78d",
+                    "gatewayUrl": "https://cbscom-test.testonly.conviva.com",
+                },
+                "contentInfo": {
+                    "Conviva.assetName": "{data.contentVideoTitle}",
+                    "Conviva.streamUrl": "{data.resolvedContentURLString}",
+                    "Conviva.duration": "{context.inbuilt.duration}",
+                    "Conviva.offline_playback": "0",
+                    "Conviva.defaultResource": "MULTI-CDN",
+                    "Conviva.streamType": "{data.isLive} ? 1 : 0",
+                    "Conviva.applicationName": "SkipIntro",
+                    "Conviva.encodedFrameRate": "{data.playerItemModel.framerate}",
+                    "Conviva.viewerId": "{data.userId}",
+                    
+                    "appVersion": "{context.appVersion}",
+                    "app": "{context.appName}",
+                    "isEpisode": "{data.platformModel.tpEpisodeFlag} ? true : false",
+                    "seriesTitle": "{data.platformModel.tpSeriesTitle} || none",
+                    "Player_Version": "{data.playerVersion}",
+                    "isAd": "false",
+                    "Partner_ID": "{data.partner} || none",
+                    "drm": "{data.isFairplayProtected} ? true : false",
+                    "drmType": "{data.isFairplayProtected} ? Fairplay : none",
+                    "winDimension": "{context.formattedPlayerSize}",
+                    "contentId": "{data.isLive} ? {data.mediaId} : {data.platformModel.mPXRefID}",
+                    "contentType": "{data.customAppProps.contentType}",
+                    "accessType": "{data.subscriptionStatus} || none",
+                    "stream_id": "{data.daiStreamId}",
+                    "showId": "{data.customAppProps.showId}",
+                    "episodeTitle": "{data.customAppProps.episodeTitle}",
+                    "appRegion": "{context.appRegion}",
+                    
+                },
+                "adInfo": {
+                    "Conviva.streamUrl": "{data.resolvedContentURLString}",
+                    "Conviva.defaultResource": "MULTI-CDN",
+                    "Conviva.streamType": "{data.isLive} ? 1 : 0",
+                    "Conviva.applicationName": "SkipIntro",
+                    "Conviva.viewerId": "{data.userId}",
+
+                    "Conviva.assetName": "{data.adModel.adTitle} || DAI Ad",
+                    "Conviva.streamType": "{data.isLive} ? 1 : 0",
+                    "Conviva.duration": "{data.adModel.adDuration}",
+                    
+                    "c3.ad.technology": "{data.customAppProps.adTechnology}",
+                    "c3.ad.id": "{data.adModel.trackingAdID}",
+                    "c3.ad.adManagerName": "{context.adManagerName}",
+                    "c3.ad.adManagerVersion": "{context.adManagerVersion}",
+                    "c3.ad.system": "{data.adModel.trackingAdSystem}",
+                    "c3.ad.adStitcher": "{data.customAppProps.adStitcher}",
+                    "c3.ad.creativeId": "{data.adModel.trackingCreativeID}",
+                    "c3.ad.sequence": "{data.adModel.adPositionInPod}",
+                    "c3.ad.advertiser": "{data.adModel.advertiserName} || NA",
+                    "c3.ad.sessionStartEvent": "{context.inbuilt.currentAdSessionStartEvent}",
+                    "c3.ad.position": "{context.inbuilt.adPositionString}",
+                    "c3.ad.mediaFileApiFramework": "NA",
+                    "c3.ad.isSlate": "false",
+                    
+                },
+                "dataType": {
+                    "sendUndefined": "boolean",
+                    "Conviva.duration": "int",
+                    "Conviva.offline_playback": "int",
+                    "Conviva.streamType": "int",
+                    "Conviva.encodedFrameRate": "int",
+                }
+            }
+        },
+
+}

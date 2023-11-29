@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-regular.otf">
+            <string>Siro-Regular</string>
+        </array>
+        <array key="siro-semibold.otf">
+            <string>Siro-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditAPClassesViewController" customModule="MPScoreboard3" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomContainerView" destination="nYJ-tX-sjT" id="Hvg-RO-ETF"/>
+                <outlet property="containerScrollView" destination="2eO-KP-UKW" id="x16-cf-djQ"/>
+                <outlet property="fakeStatusBar" destination="M7z-53-VnF" id="06w-F1-RWu"/>
+                <outlet property="navView" destination="mH0-Tk-iEl" id="YjR-SC-cAf"/>
+                <outlet property="saveButton" destination="U5N-Yw-e1a" id="dZK-jF-6xi"/>
+                <outlet property="textField1" destination="0bS-fm-TuN" id="hRg-Ky-r9K"/>
+                <outlet property="textField10" destination="YZQ-Wz-ufj" id="l9z-0K-wgy"/>
+                <outlet property="textField2" destination="CUd-id-1hn" id="itr-w6-D3V"/>
+                <outlet property="textField3" destination="pji-tl-nad" id="MSv-In-hRm"/>
+                <outlet property="textField4" destination="XNu-10-g1D" id="GmE-2A-fbe"/>
+                <outlet property="textField5" destination="sJ4-Gt-8dh" id="Suz-kG-GXO"/>
+                <outlet property="textField6" destination="riF-Ri-HCk" id="Kw1-XW-TGR"/>
+                <outlet property="textField7" destination="jPM-De-fqL" id="WDg-tL-EQo"/>
+                <outlet property="textField8" destination="rGX-ig-rnc" id="Uaj-2c-p4k"/>
+                <outlet property="textField9" destination="XuL-p1-Clv" id="lO7-jQ-B8L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-53-VnF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mH0-Tk-iEl">
+                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit AP Classes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ca-IL-OIH" userLabel="Title">
+                            <rect key="frame" x="80" y="12" width="214" height="20"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="18"/>
+                            <color key="textColor" name="MPBlackColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-bB-tkz" userLabel="BackButton">
+                            <rect key="frame" x="16" y="7" width="60" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Siro-SemiBold" family="Siro" pointSize="17"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" name="MPBlueColor"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonTouched" destination="-1" eventType="touchUpInside" id="uPu-kT-aV1"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" id="sU5-OO-LRA">
+                            <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="MPGrayButtonBorderColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eO-KP-UKW">
+                    <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGm-fI-kvT">
+                            <rect key="frame" x="16" y="21" width="343" height="20"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Add up to 10 advanced placement classes.">
+                                    <attributes>
+                                        <color key="NSColor" name="MPDarkGrayColor"/>
+                                        <font key="NSFont" size="14" name="Siro-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-oh-17I">
+                            <rect key="frame" x="0.0" y="62" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0bS-fm-TuN">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Vtg-I3-OjC"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n37-pA-n1p">
+                            <rect key="frame" x="0.0" y="116" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CUd-id-1hn">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="iXq-Iv-OVg"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYW-NY-G1H">
+                            <rect key="frame" x="0.0" y="170" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pji-tl-nad">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="pJp-AX-BzL"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ar3-Wi-SBF">
+                            <rect key="frame" x="0.0" y="224" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-10-g1D">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="6wn-hb-QhX"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4sO-sn-ewM">
+                            <rect key="frame" x="0.0" y="278" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sJ4-Gt-8dh">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="k0l-rq-Pxr"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41C-Wa-FvN">
+                            <rect key="frame" x="0.0" y="332" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="riF-Ri-HCk">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="zbt-qv-aqc"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gv1-64-0MG">
+                            <rect key="frame" x="0.0" y="386" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jPM-De-fqL">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="xVd-VP-177"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7f2-AQ-agy">
+                            <rect key="frame" x="0.0" y="440" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rGX-ig-rnc">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="gyD-27-NHf"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K75-v6-KJZ">
+                            <rect key="frame" x="0.0" y="494" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XuL-p1-Clv">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="uY2-eC-Sd8"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8F-Nk-37Q">
+                            <rect key="frame" x="0.0" y="548" width="375" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: AP Calculus" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YZQ-Wz-ufj">
+                                    <rect key="frame" x="20" y="0.0" width="335" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="MPWhiteColor"/>
+                                    <color key="textColor" name="MPBlackColor"/>
+                                    <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="cfL-xp-nNT"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="MPWhiteColor"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-cQ-2S5">
+                            <rect key="frame" x="16" y="600" width="343" height="20"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="AP classes will be listed alphabetically upon saving.">
+                                    <attributes>
+                                        <color key="NSColor" name="MPDarkGrayColor"/>
+                                        <font key="NSFont" size="12" name="Siro-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="ff8-lJ-b8c"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="92s-gQ-qjW"/>
+                </scrollView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nYJ-tX-sjT">
+                    <rect key="frame" x="0.0" y="704" width="375" height="104"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5N-Yw-e1a">
+                            <rect key="frame" x="16" y="24" width="343" height="32"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="MPBlackColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Save">
+                                <color key="titleColor" name="MPWhiteColor"/>
+                            </state>
+                            <state key="disabled">
+                                <color key="titleColor" name="MPWhiteColor"/>
+                            </state>
+                            <connections>
+                                <action selector="saveButtonTouched" destination="-1" eventType="touchUpInside" id="UBL-Dg-Aok"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" id="x6b-wz-pVY">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="MPGrayButtonBorderColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="MPWhiteColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="MPWhiteColor"/>
+            <point key="canvasLocation" x="72.799999999999997" y="-12.561576354679804"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="MPBlackColor">
+            <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPBlueColor">
+            <color red="0.0" green="0.29019607843137257" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPDarkGrayColor">
+            <color red="0.396078431372549" green="0.40000000000000002" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPGrayButtonBorderColor">
+            <color red="0.85098039215686272" green="0.85882352941176465" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

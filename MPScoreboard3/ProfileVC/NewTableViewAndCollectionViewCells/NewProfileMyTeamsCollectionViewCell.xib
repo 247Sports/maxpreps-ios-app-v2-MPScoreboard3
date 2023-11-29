@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="siro-bold.otf">
+            <string>Siro-Bold</string>
+        </array>
+        <array key="siro-regular.otf">
+            <string>Siro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NewProfileMyTeamsCollectionViewCell" customModule="MPScoreboard3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="172"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="172"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iB-7j-zgX">
+                        <rect key="frame" x="0.0" y="0.0" width="347" height="172"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19-2020 Junior Varsity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9tF-ZW-Jyu">
+                                <rect key="frame" x="20" y="14" width="295" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="14"/>
+                                <color key="textColor" name="MPBlackColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooperfield Park (Shingle Springs, CA)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="P2i-rf-ZvJ">
+                                <rect key="frame" x="20" y="38" width="295" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="14"/>
+                                <color key="textColor" name="MPBlackColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DI8-AW-Fm4">
+                                <rect key="frame" x="20" y="67" width="307" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MPSeparatorLineColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brian Baker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="JgV-Bv-OWq">
+                                <rect key="frame" x="20" y="81" width="295" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="14"/>
+                                <color key="textColor" name="MPBlackColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="rne-Il-YIu">
+                                <rect key="frame" x="20" y="112" width="307" height="14"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="GR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-Z2-6vD">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="7TH-qG-M3g"/>
+                                            <constraint firstAttribute="width" constant="40" id="Y1W-su-aCc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="veE-MS-fgU">
+                                        <rect key="frame" x="53.5" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="DNu-cs-ssO"/>
+                                            <constraint firstAttribute="height" constant="14" id="WkH-yX-SGH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="HT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jDB-in-4h1">
+                                        <rect key="frame" x="107" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="NCj-c4-28i"/>
+                                            <constraint firstAttribute="height" constant="14" id="bgN-cw-N7y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="WT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kZw-Ro-Xer">
+                                        <rect key="frame" x="160" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="R4P-1j-uRW"/>
+                                            <constraint firstAttribute="width" constant="40" id="cRU-Xh-sVA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="POS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hpR-HP-UDO">
+                                        <rect key="frame" x="213.5" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="DhB-0z-8LV"/>
+                                            <constraint firstAttribute="height" constant="14" id="Dhr-Q4-SE1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="CAPT." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LSV-y1-zFc">
+                                        <rect key="frame" x="267" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="KxS-P3-fft"/>
+                                            <constraint firstAttribute="width" constant="40" id="vzR-IX-FTU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Bold" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="iWC-jv-Wje"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1pj-Gw-Zfm">
+                                <rect key="frame" x="20" y="138" width="307" height="14"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sr." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acr-2B-mQH">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="7iH-FR-Pbt"/>
+                                            <constraint firstAttribute="width" constant="40" id="bEl-ZK-JvN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlb-YV-A9h">
+                                        <rect key="frame" x="53.5" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="VMX-DL-CoB"/>
+                                            <constraint firstAttribute="width" constant="40" id="ipw-GW-zD2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="6' 6&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8Y-3U-RNx">
+                                        <rect key="frame" x="107" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="Jry-kX-q4H"/>
+                                            <constraint firstAttribute="width" constant="40" id="LtN-xa-QGV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="190" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbA-6r-bVh">
+                                        <rect key="frame" x="160" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="TVD-g3-OWF"/>
+                                            <constraint firstAttribute="width" constant="40" id="kFP-1h-l2M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="PG, SG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-Fq-WH0">
+                                        <rect key="frame" x="213.5" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="U2h-z0-mmA"/>
+                                            <constraint firstAttribute="width" constant="40" id="jhW-cN-KZo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9d-Kc-AXF">
+                                        <rect key="frame" x="267" y="0.0" width="40" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="QdN-MK-GDb"/>
+                                            <constraint firstAttribute="height" constant="14" id="gfZ-LU-Zcd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Siro-Regular" family="Siro" pointSize="12"/>
+                                        <color key="textColor" name="MPDarkGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="fUx-K9-UKB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="MPOffWhiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1pj-Gw-Zfm" firstAttribute="top" secondItem="rne-Il-YIu" secondAttribute="bottom" constant="12" id="5mC-LJ-3Qr"/>
+                            <constraint firstAttribute="trailing" secondItem="rne-Il-YIu" secondAttribute="trailing" constant="20" id="6lC-Ex-nKp"/>
+                            <constraint firstItem="1pj-Gw-Zfm" firstAttribute="leading" secondItem="2iB-7j-zgX" secondAttribute="leading" constant="20" id="6zH-2Z-7Pa"/>
+                            <constraint firstItem="rne-Il-YIu" firstAttribute="leading" secondItem="2iB-7j-zgX" secondAttribute="leading" constant="20" id="9Qb-3U-zdR"/>
+                            <constraint firstItem="rne-Il-YIu" firstAttribute="top" secondItem="2iB-7j-zgX" secondAttribute="top" constant="112" id="PU8-y6-bvb"/>
+                            <constraint firstAttribute="trailing" secondItem="1pj-Gw-Zfm" secondAttribute="trailing" constant="20" id="aAg-kl-AGV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" name="MPWhiteColor"/>
+            <constraints>
+                <constraint firstItem="2iB-7j-zgX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="52J-3H-JFX"/>
+                <constraint firstItem="2iB-7j-zgX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ANN-qv-7OC"/>
+                <constraint firstAttribute="bottom" secondItem="2iB-7j-zgX" secondAttribute="bottom" id="TTd-PU-QeS"/>
+                <constraint firstAttribute="trailing" secondItem="2iB-7j-zgX" secondAttribute="trailing" id="YRn-ru-E4U"/>
+            </constraints>
+            <connections>
+                <outlet property="athleteNameLabel" destination="JgV-Bv-OWq" id="1NT-Ve-1Pw"/>
+                <outlet property="containerView" destination="2iB-7j-zgX" id="FYE-Wp-zCm"/>
+                <outlet property="statsLabel1" destination="acr-2B-mQH" id="pt5-AB-a06"/>
+                <outlet property="statsLabel2" destination="Nlb-YV-A9h" id="fqa-8o-wBD"/>
+                <outlet property="statsLabel3" destination="z8Y-3U-RNx" id="sHk-SU-Zmy"/>
+                <outlet property="statsLabel4" destination="WbA-6r-bVh" id="5sk-LI-8uM"/>
+                <outlet property="statsLabel5" destination="D8g-Fq-WH0" id="w8f-Po-oer"/>
+                <outlet property="statsLabel6" destination="D9d-Kc-AXF" id="BNt-1i-Ykl"/>
+                <outlet property="statsTitleLabel1" destination="XKQ-Z2-6vD" id="1Zf-oS-JeA"/>
+                <outlet property="statsTitleLabel2" destination="veE-MS-fgU" id="R55-5N-R7j"/>
+                <outlet property="statsTitleLabel3" destination="jDB-in-4h1" id="Xtn-iY-nEA"/>
+                <outlet property="statsTitleLabel4" destination="kZw-Ro-Xer" id="8in-Pv-sKi"/>
+                <outlet property="statsTitleLabel5" destination="hpR-HP-UDO" id="GP6-ve-yzc"/>
+                <outlet property="statsTitleLabel6" destination="LSV-y1-zFc" id="CBy-Yl-Jua"/>
+                <outlet property="subtitleLabel" destination="P2i-rf-ZvJ" id="xMf-Nq-2Gw"/>
+                <outlet property="titleLabel" destination="9tF-ZW-Jyu" id="b6Q-5W-gpP"/>
+            </connections>
+            <point key="canvasLocation" x="36.956521739130437" y="72.991071428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="MPBlackColor">
+            <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPDarkGrayColor">
+            <color red="0.396078431372549" green="0.40000000000000002" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPOffWhiteColor">
+            <color red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPSeparatorLineColor">
+            <color red="0.85098039215686272" green="0.85882352941176465" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MPWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,372 @@
+//
+//  StaffStatsTableViewCell.swift
+//  MPScoreboard3
+//
+//  Created by David Smith on 11/17/21.
+//
+
+import UIKit
+
+protocol StaffStatsTableViewCellDelegate: AnyObject
+{
+    func staffCollectionViewDidSelectCareer(selectedAthlete: Athlete)
+}
+
+class StaffStatsTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+{
+    weak var delegate: StaffStatsTableViewCellDelegate?
+    
+    @IBOutlet weak var innerContainerView: UIView!
+    @IBOutlet weak var staffStatsCollectionView: UICollectionView!
+    
+    private var staffStatsArray = [] as Array<Dictionary<String,Any>>
+    private var careerInfo = [:] as Dictionary<String,Any>
+
+    // MARK: - CollectionView Delegate Methods
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return staffStatsArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        if (staffStatsArray.count > 1)
+        {
+            return CGSize(width: kDeviceWidth - 48.0, height: 388.0)
+        }
+        else
+        {
+            return CGSize(width: kDeviceWidth - 32, height: 388.0)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 4.0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 4.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StaffStatsCollectionViewCell", for: indexPath) as! StaffStatsCollectionViewCell
+        
+        let cardData = staffStatsArray[indexPath.row]
+        
+        // Load the shapes
+        let schoolColorString = cardData["schoolColor"] as! String
+        let schoolColor = ColorHelper.color(fromHexString: schoolColorString, colorCorrection: true)
+        cell.addShapeLayers(color: schoolColor!)
+        
+        cell.fullCareerButton.tag = indexPath.row + 100
+        cell.fullCareerButton.isHidden = false
+        cell.fullCareerButton.addTarget(self, action: #selector(fullCareerButtonTouched), for: .touchUpInside)
+
+        // Load the labels
+        cell.heightWeightTitleLabel.text = cardData["heightWeightLabel"] as? String
+        cell.positionsTitleLabel.text = cardData["positionsLabel"] as? String
+        
+        
+        let heightWeightString = cardData["heightWeightString"] as! String
+        
+        var heightWeight = "- -"
+        if (heightWeightString.count > 0)
+        {
+            heightWeight = heightWeightString
+        }
+        cell.heightWeightLabel.text = heightWeight
+        
+        let jerseyString = cardData["jersey"] as! String
+        var jersey = "- -"
+        
+        if (jerseyString.count > 0)
+        {
+            jersey = jerseyString
+        }
+        cell.jerseyLabel.text = jersey
+        
+        let positionsString = cardData["positionsString"] as! String
+        var positions = "- -"
+        
+        if (positionsString.count > 0)
+        {
+            positions = positionsString
+        }
+        cell.positionsLabel.text = positions
+    
+        let year = cardData["year"] as! String
+        let grade = cardData["grade"] as! String
+        let shortGrade = MiscHelper.shortGradeFrom(grade: grade)
+        cell.topContainerHeaderLabel.text = String(format: "%@ | %@", year, shortGrade)
+        
+        let schoolName = cardData["schoolName"] as! String
+        cell.topContainerTitleLabel.text = schoolName
+        
+        let sport = cardData["sport"] as! String
+        let teamLevel = cardData["level"] as! String
+        cell.topContainerSubtitleLabel.text = String(format: "%@ %@", teamLevel, sport).uppercased()
+        
+        let sportImage = MiscHelper.getImageForSport(sport)
+        cell.topContainerSportIconImageView.image = sportImage
+        
+        // Load the image
+        let urlString = cardData["photoUrl"] as! String
+        
+        if (urlString.count > 0)
+        {
+            let url = URL(string: urlString)
+            
+            MiscHelper.getData(from: url!) { data, response, error in
+                guard let data = data, error == nil else { return }
+                
+                //print("Download Finished")
+                DispatchQueue.main.async()
+                {
+                    let image = UIImage(data: data)
+                    
+                    if (image != nil)
+                    {
+                        cell.athleteImageView.image = image
+                    }
+                }
+            }
+        }
+        
+        // Show the captain icon
+        cell.captainIconImageView.isHidden = true
+        if let isCaptain = cardData["isCaptain"] as? Bool
+        {
+            if (isCaptain == true)
+            {
+                cell.captainIconImageView.isHidden = false
+            }
+        }
+        
+        // Load the stats cells
+        let statsData = cardData["stats"] as! Array<Dictionary<String,Any>>
+        
+        cell.statsTitleLabel1.text = "- -"
+        cell.statsLabel1.text = "- -"
+        cell.statsTitleLabel2.text = "- -"
+        cell.statsLabel2.text = "- -"
+        cell.statsTitleLabel3.text = "- -"
+        cell.statsLabel3.text = "- -"
+        cell.statsTitleLabel4.text = "- -"
+        cell.statsLabel4.text = "- -"
+        cell.statsTitleLabel5.text = "- -"
+        cell.statsLabel5.text = "- -"
+        cell.statsTitleLabel6.text = "- -"
+        cell.statsLabel6.text = "- -"
+        cell.statsTitleLabel7.text = "- -"
+        cell.statsLabel7.text = "- -"
+        
+        /*
+        // Hide the View Stats Button if empty
+        if (statsData.count == 0)
+        {
+            cell.fullCareerButton.isHidden = true
+            return cell
+        }
+        
+        // Add a second check to see if there are values for at least one category, otherwise hide the button
+        var statFound = false
+        for statDict in statsData
+        {
+            let valueString = statDict["value"] as! String
+            if (valueString.count > 0)
+            {
+                statFound = true
+                break
+            }
+        }
+        
+        if (statFound == false)
+        {
+            cell.fullCareerButton.isHidden = true
+            return cell
+        }
+        */
+        if (statsData.count > 0)
+        {
+            let statDict = statsData[0]
+            let titleString = statDict["header"] as! String
+            let valueString = statDict["value"] as! String
+            
+            if (titleString.count > 0)
+            {
+                cell.statsTitleLabel1.text = titleString.uppercased()
+            }
+            
+            if (valueString.count > 0)
+            {
+                cell.statsLabel1.text = valueString
+            }
+        }
+        
+        if (statsData.count > 1)
+        {
+            let statDict = statsData[1]
+            let titleString = statDict["header"] as! String
+            let valueString = statDict["value"] as! String
+            
+            if (titleString.count > 0)
+            {
+                cell.statsTitleLabel2.text = titleString.uppercased()
+            }
+            
+            if (valueString.count > 0)
+            {
+                cell.statsLabel2.text = valueString
+            }
+        }
+        
+        if (statsData.count > 2)
+        {
+            let statDict = statsData[2]
+            let titleString = statDict["header"] as! String
+            let valueString = statDict["value"] as! String
+
+            if (titleString.count > 0)
+            {
+                cell.statsTitleLabel3.text = titleString.uppercased()
+            }
+            
+            if (valueString.count > 0)
+            {
+                cell.statsLabel3.text = valueString
+            }
+        }
+        
+        if (statsData.count > 3)
+        {
+            let statDict = statsData[3]
+            let titleString = statDict["header"] as! String
+            let valueString = statDict["value"] as! String
+
+            if (titleString.count > 0)
+            {
+                cell.statsTitleLabel4.text = titleString.uppercased()
+            }
+            
+            if (valueString.count > 0)
+            {
+                cell.statsLabel4.text = valueString
+            }
+        }
+        
+        if (statsData.count > 4)
+        {
+            let statDict = statsData[4]
+            let titleString = statDict["header"] as! String
+            let valueString = statDict["value"] as! String
+            
+            if (titleString.count > 0)
+            {
+                cell.statsTitleLabel5.text = titleString.uppercased()
+            }
+            
+            if (valueString.count > 0)
+            {
+                cell.statsLabel5.text = valueString
+            }
+        }
+        
+        if (statsData.count > 5)
+        {
+            let statDict = statsData[5]
+            let titleString = statDict["header"] as! String
+            let valueString = statDict["value"] as! String
+            
+            if (titleString.count > 0)
+            {
+                cell.statsTitleLabel6.text = titleString.uppercased()
+            }
+            
+            if (valueString.count > 0)
+            {
+                cell.statsLabel6.text = valueString
+            }
+        }
+        
+        if (statsData.count > 6)
+        {
+            let statDict = statsData[6]
+            let titleString = statDict["header"] as! String
+            let valueString = statDict["value"] as! String
+            
+            if (titleString.count > 0)
+            {
+                cell.statsTitleLabel7.text = titleString.uppercased()
+            }
+            
+            if (valueString.count > 0)
+            {
+                cell.statsLabel7.text = valueString
+            }
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        
+    }
+    
+    // MARK: - Button Methods
+    
+    @objc func fullCareerButtonTouched(_ sender: UIButton)
+    {
+        let index = sender.tag - 100
+        let cardData = staffStatsArray[index]
+        
+        // This is the bare minimum needed to open the AthleteDetailVC
+        let careerId = careerInfo["careerId"] as! String
+        let schoolColor = cardData["schoolColor"] as! String
+        let firstName = careerInfo["firstName"] as! String
+        let lastName = careerInfo["lastName"] as! String
+        let schoolName = cardData["schoolName"] as! String
+        
+        let selectedAthlete = Athlete(firstName: firstName, lastName: lastName, schoolName: schoolName, schoolState: "", schoolCity: "", schoolId: "", schoolColor: schoolColor, schoolMascotUrl: "", careerId: careerId, photoUrl: "")
+
+        self.delegate?.staffCollectionViewDidSelectCareer(selectedAthlete: selectedAthlete)
+    }
+    
+    // MARK: - Load Data Method
+    
+    func loadData(staffStatsData: Array<Dictionary<String,Any>>, info: Dictionary<String,Any>)
+    {
+        staffStatsArray = staffStatsData
+        careerInfo = info
+    }
+    
+    // MARK: - Init Methods
+    
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+        
+        innerContainerView.layer.cornerRadius = 12
+        innerContainerView.clipsToBounds = true
+        
+        // Register the QuickStats Cell
+        staffStatsCollectionView.register(UINib.init(nibName: "StaffStatsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StaffStatsCollectionViewCell")
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool)
+    {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
+}

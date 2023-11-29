@@ -1,0 +1,20 @@
+//
+//  PhotosTabTopHeaderCollectionReusableView.swift
+//  MPScoreboard3
+//
+//  Created by David Smith on 6/16/21.
+//
+
+import UIKit
+
+class PhotosTabTopHeaderCollectionReusableView: UICollectionReusableView
+{
+    @IBOutlet weak var headerTitleLabel: UILabel!
+    
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+
+    }
+    
+}
